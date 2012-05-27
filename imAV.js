@@ -7,10 +7,11 @@
 // @version			0.1.2
 // ==/UserScript==
 
-
-var script = document.createElement('script');
-script.appendChild(document.createTextNode('(' + main + ')();'));
-(document.body || document.head || document.documentElement).appendChild(script);
+(function () {
+	var script = document.createElement('script');
+	script.appendChild(document.createTextNode('(' + main + ')();'));
+	(document.body || document.head || document.documentElement).appendChild(script);
+})();
 
 function main() {
 	'use strict';
